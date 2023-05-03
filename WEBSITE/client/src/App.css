@@ -1,0 +1,173 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+div#root {
+  width: 100%;
+  height: 100%; /* remove this line to see div.app is no more 100% height */
+  background-color: indigo;
+}
+
+div.app {
+  width: 100%;
+  height: 100%;
+  background-color: blue;
+}
+
+.inline-block {
+	display: block;
+height: 24px;
+position: relative;
+}
+
+.icon {
+  display: inline-block;
+
+  height: 100%;
+}
+
+.icon {
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  background: url(twitter.svg);
+  background-size: 19px 19px;
+}
+
+.link-logo {
+	height: 4.5vh;
+	display: inline-block;
+	padding: 0px 8px
+	
+}
+
+.wallet-logo {
+  width: 56px;
+	display: inline-block;
+}
+
+.wallet-selected-logo {
+  width: 30px;
+	display: inline-block;
+}
+
+#wallet-dropdown::after {
+    content: none;
+}
+
+.dropdown-menu {
+  width: 270px;
+  background-color: rgb(137, 214, 243);
+  border: none;
+  font-weight: bold;
+	font-size: 19px;
+	top: 5px;
+	box-shadow: 10px 10px 5px rgba(0,0,0,0.05);
+}
+
+.topBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index:99;
+}
+
+
+.fullscreen {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+}
+
+.fill {
+	width: 100%;
+
+}
+
+#wallet-dropdown{
+	width: 270px;
+    color: black;
+	border: 2px solid rgb(137, 214, 243);	
+    
+    background-color: rgb(255, 255, 255);
+	box-shadow: 10px 10px 5px rgba(0,0,0,0.05);
+}
+#wallet-dropdown:focus
+{
+
+}
+
+#wallet-dropdown:hover
+{
+	background-color: rgb(137, 214, 243);
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.dropbtn {
+  width: 300px;
+    color: black;
+	border: 2px solid rgb(137, 214, 243);	
+    
+    background-color: rgb(255, 255, 255);
+	box-shadow: 10px 10px 5px rgba(0,0,0,0.05);
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+input{
+  display: none;
+}
+input:checked~.dropdown-content {
+  display: block;
+}
+
+.blink {
+  animation: blinker 2.5s linear infinite;
+}
+
+@keyframes blinker {
+  0% {
+    visibility: hidden;
+  }
+  50% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
