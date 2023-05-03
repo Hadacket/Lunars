@@ -10,7 +10,6 @@
    width="100%"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <defs
@@ -20,27 +19,6 @@
        height="1"
        fill="#fff"
        id="star" />
-    <linearGradient
-       inkscape:collect="always"
-       id="linearGradient32397">
-      <stop
-         style="stop-color:#afafaf;stop-opacity:1"
-         offset="0"
-         id="stop32393" />
-      <stop
-         style="stop-color:#7d7d7d;stop-opacity:0"
-         offset="1"
-         id="stop32395" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient32397"
-       id="linearGradient32517"
-       x1="46"
-       y1="71.000008"
-       x2="46"
-       y2="86.000008"
-       gradientUnits="userSpaceOnUse" />
   </defs>
   <sodipodi:namedview
      id="namedview152"
@@ -52,14 +30,14 @@
      inkscape:pagecheckerboard="0"
      showgrid="true"
      inkscape:zoom="8"
-     inkscape:cx="15.9375"
-     inkscape:cy="40.4375"
+     inkscape:cx="45.875"
+     inkscape:cy="59.1875"
      inkscape:window-width="1920"
      inkscape:window-height="991"
      inkscape:window-x="-9"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g148"
+     inkscape:current-layer="g213157"
      showguides="false"
      inkscape:lockguides="false"
      inkscape:snap-grids="true"
@@ -83,6 +61,12 @@
      
                var cf;
                var ft;
+               
+               function snd()
+               {
+                  var audio = new Audio('https://bafybeiegqttc7d2fxxbh2k6qyiwokc2i2beezh7lhqjyfmcw4gpfcauaga.ipfs.w3s.link/mixkit-air-whistle-punch-2048.wav');
+                  audio.play();
+               }
                
                function cpy(i,o,x,y,c,n)
                {
@@ -142,19 +126,29 @@
                   ft = setTimeout(fcft, rng(10000,20000));
                }
                
+               function fcfs()
+               {
+                  cf.style.display = "none";
+                  cf = document.getElementById("f0");
+                  cf.style.display = "inline";
+                  ft = setTimeout(fcft, 10000);
+               }
+               
                function fhf()
                {
                   clearTimeout(ft);
                   cf.style.display = "none";
                   cf = document.getElementById("fx");
                   cf.style.display = "inline";
-                  ft = setTimeout(fcft, 3000);
+                  ft = setTimeout(fcfs, 2000);
+                  snd();
                }
 
                
                window.onload = function(event) {
                 cf = document.getElementById("f8");
-                fcft();
+                
+                fcft();                
               }; 
             ]]></script>
   <g
@@ -195,9 +189,9 @@
        inkscape:label="bkg4" />
     <rect
        x="-50vw"
-       y="0"
+       y="-50vh"
        width="100vw"
-       height="100%"
+       height="100vh"
        style="fill:#ffc476"
        id="rect18">
       <animate
@@ -211,7 +205,8 @@
   <g
      id="g148"
      style="display:inline"
-     inkscape:label="g148">
+     inkscape:label="g148"
+     inkscape:groupmode="layer">
     <g
        id="g166128"
        inkscape:label="mech_wings"
@@ -436,8 +431,8 @@
          id="path431349"
          style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          inkscape:label="back"
-         d="m 43,23 v 1 h -3 v 1 h -2 v 1 h -2 v 1 h -1 v 1 h -1 v 1 h -1 v 1 h -1 v 2 h -1 v 1 h -1 v 2 h -1 v 4 h -1 v 7 h 1 v 2 h 1 v 2 h 1 v 1 h 1 v 1 h 1 v 1 h 1 v 1 h 2 v 1 h 2 v 1 h 1 v 11 h 17 v -2 h 1 v -2 h 1 v -1 h 1 v -1 h 4 v -1 h 3 v -1 h 3 v -1 h 3 v -1 h 1 v -4 h -6 v 1 h -5 v 1 h -5 v -1 h 2 v -1 h 1 v -1 h 1 v -1 h 1 v -1 h 1 v -2 h 1 v -2 h 1 v -7 h -1 v -4 h -1 v -2 h -1 v -1 h -1 v -2 h -1 v -1 h -1 v -1 h -1 v -1 h -1 v -1 h -2 v -1 h -2 v -1 h -3 v -1 z"
-         sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc" />
+         d="m 36,55 v 12 h 20 v -2 h 1 v -2 h 1 v -1 h 1 v -1 h 4 v -1 h 3 v -1 h 3 v -1 h 3 v -1 h 1 v -4 h -6 v 1 h -5 v 1 h -5 z"
+         sodipodi:nodetypes="cccccccccccccccccccccccccc" />
       <path
          id="path433680"
          style="display:none;fill:#524056;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -506,27 +501,6 @@
          inkscape:label="general" />
     </g>
     <g
-       id="g120"
-       style="display:inline"
-       transform="translate(-1,3)"
-       inkscape:label="cloud">
-      <path
-         d="m 26,68 v -1 h 1 v -1 h 1 v -1 h 3 v -2 h 1 v -3 h 1 v -1 h 1 v -1 h 1 v -1 h 2 v 1 h 1 v 1 h 1 v 1 h 3 v -1 h 3 v -1 h 5 v 1 h 3 v 1 h 1 v 1 h 3 v -1 h 1 v -1 h 2 v 1 h 1 v 1 h 1 v 1 h 1 v 1 h 1 v 1 h 1 v 1 h 2 v 1 h 1 v 1 h 1 v 1 h 1 v 3 h -1 v 1 h -1 v 1 h -1 v 1 h -1 v 1 h -1 v 1 h -2 v 1 h -1 v 1 h -2 v -1 h -1 v -1 h -3 v 1 h -1 v 1 h -1 v 1 h -1 v 1 h -2 v -1 h -1 v -1 h -1 v -1 h -1 v -1 h -3 v 1 h -1 v 1 h -1 v 1 h -1 v 1 h -2 v -1 h -1 v -1 h -1 v -1 h -1 v -1 h -2 v 1 h -1 v 1 h -1 v -1 h -1 v -1 h -2 v -1 h -1 v -1 h -1 v -1 h -1 v -1 h -1 v -1 h -1 v -3"
-         id="path114"
-         sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc" />
-      <path
-         d="m 31,65 h 1 v -2 h 1 v -3 h 1 v -1 h 1 v -1 h 2 v 1 h 1 v 1 h 1 v 1 h 3 v -1 h 3 v -1 h 5 v 1 h 3 v 1 h 1 v 1 h 3 v -1 h 1 v -1 h 2 v 1 h 1 v 1 h 1 v 1 h 1 v 1 h 1 v 1 h 1 v 1 h 2 v 1 h 1 v 1 h 1 v 3 h -1 v 1 h -1 v 1 h -1 v 1 h -1 v 1 h -2 v 1 h -1 v 1 h -2 v -1 h -1 v -1 h -3 v 1 h -1 v 1 h -1 v 1 h -1 v 1 h -2 v -1 h -1 v -1 h -1 v -1 h -1 v -1 h -3 v 1 h -1 v 1 h -1 v 1 h -1 v 1 h -2 v -1 h -1 v -1 h -1 v -1 h -1 v -1 h -2 v 1 h -1 v 1 h -1 v -1 h -1 v -1 h -2 v -1 h -1 v -1 h -1 v -1 h -1 v -1 h -1 v -3 h 1 v -1 h 1 v -1 h 3 v -1"
-         fill="#ffffff"
-         id="path116"
-         sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc" />
-      <path
-         d="m 27,68 v 1 h 1 v 1 h 2 v 2 h 2 v -1 h 1 v -1 h 1 v -1 h 2 v 1 h 1 v 1 h 1 v 1 h 2 v 1 h 4 v -1 h 1 v -1 h 1 v -1 h 1 v 1 h 1 v 1 h 1 v 1 h 1 v 1 h 3 v -1 h 1 v -1 h 1 v -1 h 1 v -1 h 2 v 1 h 1 v 1 h 1 v 1 h 2 v -1 h 2 v -1 h 2 v -1 h 1 v -1 h 1 v -1 h 1 v 3 h -1 v 1 h -1 v 1 h -1 v 1 h -1 v 1 h -2 v 1 h -1 v 1 h -2 v -1 h -1 v -1 h -3 v 1 h -1 v 1 h -1 v 1 h -1 v 1 h -2 v -1 h -1 v -1 h -1 v -1 h -1 v -1 h -3 v 1 h -1 v 1 h -1 v 1 h -1 v 1 h -2 v -1 h -1 v -1 h -1 v -1 h -1 v -1 h -2 v 1 h -1 v 1 h -1 v -1 h -1 v -1 h -2 v -1 h -1 v -1 h -1 v -1 h -1 v -1 h -1 v -3 h 1"
-         fill="#d8d8d8"
-         id="path118"
-         sodipodi:insensitive="true"
-         sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc" />
-    </g>
-    <g
        id="g93762"
        style="display:none"
        inkscape:label="baloon">
@@ -564,8 +538,25 @@
     </g>
     <g
        id="g53538"
-       style="display:none"
+       style="display:inline"
        inkscape:label="cloud">
+      <path
+         style="fill:#52c5fd;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 37,72 v 2 h 1 v -2 m 11,3 v 2 h 1 v -2 m 7,-3 v 2 h 1 v -2 m 8,3 v 2 h 1 V 75 M 31,69 v 2 h 1 v -2 m -5,7 v 2 h 1 v -2 m 5,3 v 2 h 1 v -2 m 4,4 v 2 h 1 v -2 m 12,-2 v 2 h 1 V 81 M 44,67 v 2 h 1 v -2 m 17,3 v 2 h 1 v -2 m -3,9 v 2 h 1 V 79 M 54,67 v 2 h 1 V 67 M 43,77 v 2 h 1 v -2"
+         id="path47465"
+         sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+         inkscape:label="rain">
+        <animateTransform
+           id="vra"
+           attributeName="transform"
+           attributeType="xml"
+           begin="9;vra.end+18"
+           dur="1"
+           repeatCount="12"
+           type="translate"
+           additive="replace"
+           values="0,0; 0,30;" />
+      </path>
       <path
          d="m 23,72 v -1 h 1 v -1 h 1 v -1 h 2 v -2 h 1 v -1 h 1 v -1 h 1 v -1 h 15 v -1 h 1 v -1 h 3 v 1 h 2 v 1 h 1 v 1 h 4 v -1 h 4 v 1 h 3 v 1 h 1 v 1 h 1 v 2 h 2 v 1 h 2 v 1 h 1 v 1 h 1 v 6 h -1 v 2 h -1 v 1 h -1 v 1 h -1 v 1 h -2 v 1 h -2 v 1 h -3 v -1 h -2 v 1 h -1 -1 v 1 h -6 v -1 h -1 v -1 h -1 -1 v -1 h -3 v 1 h -1 -1 v 1 h -1 v 1 h -5 v -1 h -2 v -1 h -3 v -1 h -4 v -1 h -2 v -1 h -1 v -1 h -1 v -2 h -1 v -6"
          id="path53532"
@@ -574,88 +565,90 @@
       <path
          id="path53534"
          style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
-         d="m 46,63 v 1 h -1 v 1 H 44 30 v 1 h -1 v 1 h -1 v 2 h -1 v 1 h -2 v 1 h -1 v 1 h -1 v 5 h 2 v 4 h 43 v -4 h 2 v -5 h -1 v -1 h -2 v -1 h -2 v -1 h -1 v -2 h -1 v -1 h -3 v -1 h -4 v 1 h -4 v -1 h -1 v -1 h -2 v -1 z"
-         sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccc" />
+         inkscape:label="cloud_color"
+         d="m 46,63 v 1 h -1 v 1 H 44 30 v 1 h -1 v 1 h -1 v 2 h -1 v 1 h -2 v 1 h -1 v 1 h -1 v 2 3 1 h 1 v 2 h 1 v 1 h 2 v 1 h 4 v 1 h 3 v 1 h 2 v 1 h 5 v -1 h 1 v -1 h 2 v -1 h 3 v 1 h 2 v 1 h 1 v 1 h 6 v -1 h 2 v -1 h 2 v 1 h 3 v -1 h 2 v -1 h 2 v -1 h 1 v -1 h 1 v -2 h 1 v -1 -3 -2 h -1 v -1 h -2 v -1 h -2 v -1 h -1 v -2 h -1 v -1 h -3 v -1 h -4 v 1 h -4 v -1 h -1 v -1 h -2 v -1 z">
+        <animate
+           attributeName="fill"
+           values="ffffff;ffffff;a6a6a6;a6a6a6;ffffff;ffffff"
+           keyTimes="0;0.2;0.3;0.7;0.8; 1"
+           dur="30"
+           repeatCount="indefinite" />
+      </path>
       <path
-         style="display:inline;fill:#a9e2fe;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 24,74 v 1 h 1 v 1 h 2 v 1 h 6 v 1 h 2 v 1 h 2 v 1 h 3 v -1 h 1 v -1 h 3 v -1 h 3 v 1 h 3 v 1 h 1 v 1 h 4 v -1 h 2 v -1 h 3 v 1 h 2 v -1 h 2 v -1 h 3 v -1 h 1 v -1 h 1 v -1 h 1 v 4 h -1 v 2 h -1 v 1 h -1 v 1 h -2 v 1 h -2 v 1 h -3 v -1 h -2 v 1 h -2 v 1 h -6 v -1 h -1 v -1 h -2 v -1 h -3 v 1 h -2 v 1 h -1 v 1 h -5 v -1 h -2 v -1 h -3 v -1 h -4 v -1 h -2 v -1 h -1 v -2 h -1 v -4"
+         style="display:inline;fill:#000000;fill-opacity:0.2;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 24,74 v 1 h 1 v 1 h 2 v 1 h 6 v 1 h 2 v 1 h 1 v 1 h 4 v -1 h 1 v -1 h 3 v -1 h 3 v 1 h 3 v 1 h 1 v 1 h 4 v -1 h 2 v -1 h 3 v 1 h 2 v -1 h 2 v -1 h 3 v -1 h 1 v -1 h 1 v -1 h 1 v 4 h -1 v 2 h -1 v 1 h -1 v 1 h -2 v 1 h -2 v 1 h -3 v -1 h -2 v 1 h -2 v 1 h -6 v -1 h -1 v -1 h -2 v -1 h -3 v 1 h -2 v 1 h -1 v 1 h -5 v -1 h -2 v -1 h -3 v -1 h -4 v -1 h -2 v -1 h -1 v -2 h -1 v -4"
          id="path61782"
-         sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc" />
-      <path
-         style="fill:none;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 54,68 h 4 v 5 h -4 v -2 h 2 v -1 h -2 v -2"
-         id="path59626" />
+         sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+         inkscape:label="cloud_shadow" />
     </g>
     <g
        id="g40375"
        inkscape:label="saucer"
-       transform="translate(0,1.999995)"
        style="display:none">
       <path
          id="path1018"
          style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 26,62.000005 v 1 h -1 v 1 h -1 v 1 h -1 v 2 h -1 v 4 h 1 v 2 h 1 v 1 h 3 v 2 h 1 v 1 h 1 v 1 h 1 v 1 h 1 v 1 h 3 v 1 h 4 v 1 h 17 v -1 h 4 v -1 h 3 v -1 h 1 v -1 h 1 v -1 h 1 v -1 h 1 v -2 h 3 v -1 h 1 v -2 h 1 v -4 h -1 v -2 h -1 v -1 h -1 v -1 h -1 v -1 z"
-         sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccccccc" />
+         d="m 28,64 v 1 h -1 v 1 h -1 v 1 h -1 v 2 h -1 v 3 h 1 v 2 h 1 v 1 h 1 v 1 h 1 v 1 h 1 v 1 h 1 v 1 h 1 v 1 h 3 v 1 h 4 v 1 h 17 v -1 h 4 v -1 h 3 v -1 h 1 v -1 h 1 v -1 h 1 v -1 h 1 v -1 h 1 v -1 h 1 v -2 h 1 v -3 h -1 v -2 h -1 v -1 h -1 v -1 h -1 v -1 z"
+         sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+         inkscape:label="saucer_contour" />
       <path
-         style="fill:url(#linearGradient32517);fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 26,76.000005 h 3 v 1 h 1 v 1 h 1 v 1 h 4 v 1 h 4 v 1 h 15 v -1 h 4 v -1 h 4 v -1 h 1 v -1 h 1 v -1 h 1 v -2 H 28 v 2"
+         style="fill:#505050;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 30,77 v 1 h 1 v 1 h 2 v 1 h 5 v 1 h 17 v -1 h 5 v -1 h 2 v -1 h 1 v -1 h 1 V 75 H 28 v 1 l 1,-0.01375 v 1.013749"
          id="path2225"
-         sodipodi:nodetypes="ccccccccccccccccccccccccc" />
+         sodipodi:nodetypes="cccccccccccccccccccccc"
+         inkscape:label="saucer_bottom_back" />
+      <path
+         style="fill:#3d3d3d;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 34,79 v 1 h 4 v 1 h 17 v -1 h 4 v -1"
+         id="path74230"
+         sodipodi:nodetypes="cccccccc"
+         inkscape:label="saucer_color_6" />
+      <path
+         style="display:inline;fill:#464646;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 30,77 v 1 h 1 v 1 h 31 v -1 h 1 v -1"
+         id="path72263"
+         sodipodi:nodetypes="cccccccc"
+         inkscape:label="saucer_color_5" />
       <path
          style="display:inline;fill:#505050;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 29,76.000005 v 1 h 1 v 1 h 33 v -1 h 1 v -1"
-         id="path72263"
-         sodipodi:nodetypes="cccccccc" />
-      <path
-         style="fill:#464646;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 31,78.000005 v 1 h 3 v 1 h 25 v -1 h 3 v -1"
-         id="path74230"
-         sodipodi:nodetypes="cccccccc" />
-      <path
-         style="display:inline;fill:#858585;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 26,63.000005 v 1 h 41 v -1"
-         id="path2763"
-         sodipodi:nodetypes="cccc" />
+         d="m 28,75 v 1 h 1 v 1 h 35 v -1 h 1 v -1"
+         id="path94200"
+         sodipodi:nodetypes="cccccccc"
+         inkscape:label="saucer_color_4" />
       <path
          style="display:inline;fill:#666666;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 24,65.000005 h 45 v 1 0 1 h 1 v 4 h -1 v 1 0 1 H 24 v -2 h -1 v -4 h 1"
+         d="m 26,67 h 41 v 2 h 1 v 3 h -1 v 2 H 26 v -2 h -1 v -3 h 1"
          id="path57037"
-         sodipodi:nodetypes="cccccccccccccccc" />
-      <path
-         style="display:inline;fill:#3b3b3b;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 55,80.000005 v 1 H 38 v -1"
-         id="path75786"
-         sodipodi:nodetypes="cccc" />
-      <path
-         style="display:inline;fill:#5a5a5a;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 28,74.000005 v 2 h 37 v -2"
-         id="path94200"
-         sodipodi:nodetypes="cccc" />
+         sodipodi:nodetypes="cccccccccccc"
+         inkscape:label="saucer_color_3" />
       <path
          style="display:inline;fill:#757575;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 23,67.000005 h 1 v -1 h 45 v 1 h 1 v 4 h -1 v 1 H 24 v -1 h -1"
+         d="m 25,69 h 1 v -1 h 41 v 1 h 1 v 3 h -1 v 1 H 26 v -1 h -1"
          id="path52847"
-         sodipodi:nodetypes="cccccccccccc" />
+         sodipodi:nodetypes="cccccccccccc"
+         inkscape:label="saucer_color_2" />
       <path
+         id="path2763"
          style="display:inline;fill:#858585;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 23,68.000005 h 47 v 2 H 23 Z"
-         id="path63064"
-         sodipodi:nodetypes="ccccc" />
-      <path
-         style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 27,67.000005 v 1 h -1 v 2 h 1 v 1 h 1 v 1 h 2 v -1 h 1 V 69.98262 l 1,0.01739 v -2 h -1 v -1 h -1 v -1 h -2 v 1 M 36,67 v 1 h -1 v 2 h 1 v 1 h 1 v 1 h 2 v -1 h 1 v -1.017385 l 1,0.01739 v -2 h -1 v -1 h -1 v -1 h -2 v 1 m 8,5e-6 v 1 h -1 v 2 h 1 v 1 h 1 v 1 h 2 v -1 h 1 v -1.017385 l 1,0.01738 v -2 h -1 v -1 h -1 v -1 h -2 v 1 M 54,67 v 1 h -1 v 2 h 1 v 1 h 1 v 1 h 2 v -1 h 1 v -1.017385 l 1,0.01739 v -2 h -1 v -1 h -1 v -1 h -2 v 1 M 63,67 v 1 h -1 v 2 h 1 v 1 h 1 v 1 h 2 v -1 h 1 v -1.017385 l 1,0.01739 v -2 h -1 v -1 h -1 v -1 h -2 v 1"
-         id="path2886"
-         sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
-         sodipodi:insensitive="true" />
+         inkscape:label="saucer_color_0"
+         d="m 28,65 v 1 h 37 v -1 z m -3,4 v 3 h 43 v -3 z" />
       <g
          id="gvsl"
-         inkscape:label="gvsl"
+         inkscape:label="saucer_lights"
          style="display:inline;mix-blend-mode:normal">
         <path
            style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 27,68.000005 h 1 v -1 h 2 v 1 h 1 v 2 h -1 v 1 h -2 v -1 h -1"
+           d="m 53,68 v 1 h -1 v 3 h 1 v 1 h 3 v -1 h 1 v -3 h -1 v -1 m -11,0 v 1 h -1 v 3 h 1 v 1 h 3 v -1 h 1 v -3 h -1 v -1 m 13,0 v 1 h -1 v 3 h 1 v 1 h 3 v -1 h 1 v -3 h -1 v -1 m -27,0 v 1 h -1 v 3 h 1 v 1 h 3 v -1 h 1 v -3 h -1 v -1 m -11,0 v 1 h -1 v 3 h 1 v 1 h 3 v -1 h 1 v -3 h -1 v -1"
+           id="path2886"
+           sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+           sodipodi:insensitive="true"
+           inkscape:label="saucer_light_back" />
+        <path
+           style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 29,69 h 3 v 3 h -3"
            id="path4917"
-           sodipodi:nodetypes="cccccccccccc">
+           sodipodi:nodetypes="cccc"
+           inkscape:label="saucer_light_1">
           <animate
              attributeName="fill"
              begin="0s"
@@ -665,9 +658,10 @@
         </path>
         <path
            style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 36,68.000005 h 1 v -1 h 2 v 1 h 1 v 2 h -1 v 1 h -2 v -1 h -1"
+           d="m 37,69 h 3 v 3 h -3"
            id="pvslb"
-           sodipodi:nodetypes="cccccccccccc">
+           sodipodi:nodetypes="cccc"
+           inkscape:label="saucer_light_2">
           <animate
              attributeName="fill"
              begin="0.25s"
@@ -677,9 +671,10 @@
         </path>
         <path
            style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 45,68.000005 h 1 v -1 h 2 v 1 h 1 v 2 h -1 v 1 h -2 v -1 h -1"
+           d="m 45,69 h 3 v 3 h -3"
            id="pvslg"
-           sodipodi:nodetypes="cccccccccccc">
+           sodipodi:nodetypes="cccc"
+           inkscape:label="sauver_light_3">
           <animate
              attributeName="fill"
              begin="0.5s"
@@ -689,9 +684,10 @@
         </path>
         <path
            style="display:inline;mix-blend-mode:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 54,68.000005 h 1 v -1 h 2 v 1 h 1 v 2 h -1 v 1 h -2 v -1 h -1"
+           d="m 53,69 h 3 v 3 h -3"
            id="pvsly"
-           sodipodi:nodetypes="cccccccccccc">
+           sodipodi:nodetypes="cccc"
+           inkscape:label="saucer_light_4">
           <animate
              attributeName="fill"
              begin="0.75s"
@@ -701,9 +697,10 @@
         </path>
         <path
            style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 63,68.000005 h 1 v -1 h 2 v 1 h 1 v 2 h -1 v 1 h -2 v -1 h -1"
+           d="m 61,69 h 3 v 3 h -3"
            id="path7287"
-           sodipodi:nodetypes="cccccccccccc">
+           sodipodi:nodetypes="cccc"
+           inkscape:label="saucer_light_5">
           <animate
              attributeName="fill"
              begin="1s"
@@ -711,16 +708,11 @@
              dur="5s"
              repeatCount="indefinite" />
         </path>
-        <path
-           style="display:inline;mix-blend-mode:overlay;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 28,68.000005 v 2 h 2 v -2 z m 9,0 v 2 h 2 v -2 z m 9,0 v 2 h 2 v -2 z m 9,0 v 2 h 2 v -2 z m 9,0 v 2 h 2 v -2 z"
-           id="path48840"
-           sodipodi:nodetypes="ccccccccccccccccccccccccc" />
       </g>
       <path
          id="saucerline_2"
          style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 31,73.000005 v 3 h 1 v 2 h 1 v 2 h 1 v -2 h -1 v -2 h -1 v -3 z m 7,0 v 4 h 1 v 2 h 1 v 3 h 1 v -3 h -1 v -2 h -1 v -4 z m 8,0 v 9 h 1 v -9 z m 8,0 v 4 h -1 v 2 h -1 v 3 h 1 v -3 h 1 v -2 h 1 v -4 z m 7,0 v 3 h -1 v 2 h -1 v 2 h 1 v -2 h 1 v -2 h 1 v -3 z"
+         d="m 31,74 v 3 h 1 v 2 h 1 v 1 h 1 v -1 h -1 v -2 h -1 v -3 z m 7,0 v 4 h 1 v 2 h 1 v 2 h 1 v -2 h -1 v -2 h -1 v -4 z m 8,0 v 8 h 1 v -8 z m 8,0 v 4 h -1 v 2 h -1 v 2 h 1 v -2 h 1 v -2 h 1 v -4 z m 7,0 v 3 h -1 v 2 h -1 v 1 h 1 v -1 h 1 v -2 h 1 v -3 z"
          sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
          inkscape:label="saucerline_2">
         <animate
@@ -733,9 +725,10 @@
       <path
          id="saucerline_1"
          style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 34,75 v 3 h 1 v -3 z m 1,3 v 2 h 1 v -2 z m 1,2 v 3 h 1 v -3 z m 6,-5 v 5 h 1 v -5 z m 1,5 v 4 h 1 v -4 z m 7,-5 v 5 h 1 v -5 z m 0,5 h -1 v 4 h 1 z m 8,-5 v 3 h 1 v -3 z m 0,3 h -1 v 2 h 1 z m -1,2 h -1 v 3 h 1 z"
+         d="m 34,75.999995 v 3 h 1 v -3 z m 1,3 v 2 h 1 v -2 z m 1,2 v 2 h 1 v -2 z m 6,-5 v 5 h 1 v -5 z m 1,5 v 3 h 1 v -3 z m 7,-5 v 5 h 1 v -5 z m 0,5 h -1 v 3 h 1 z m 8,-5 v 3 h 1 v -3 z m 0,3 h -1 v 2 h 1 z m -1,2 h -1 v 2 h 1 z"
          transform="translate(0,-1.999995)"
-         inkscape:label="saucerline_1">
+         inkscape:label="saucerline_1"
+         sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccccc">
         <animate
            calcMode="discrete"
            attributeName="opacity"
@@ -745,21 +738,37 @@
       </path>
       <path
          style="fill:#e400ff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 39,82.000005 v 2 h -1 v 2 h -1 v 2 h -1 v 2 h -1 v 2 h -1 v 2 h -1 v 2 h -1 v 2 h 29 v -2 h -1 v -2 h -1 v -2 h -1 v -2 h -1 v -2 h -1 v -2 h -1 v -2 h -1 v -2"
+         d="m 39,82 v 2 h -1 v 2 h -1 v 2 h -1 v 2 h -1 v 2 h -1 v 2 h -1 v 2 h -1 v 2 h 29 v -2 h -1 v -2 h -1 v -2 h -1 v -2 h -1 v -2 h -1 v -2 h -1 v -2 h -1 v -2"
          id="pvslbm"
-         sodipodi:nodetypes="cccccccccccccccccccccccccccccccc">
+         sodipodi:nodetypes="cccccccccccccccccccccccccccccccc"
+         inkscape:label="saucer_beam_back">
         <animate
+           calcMode="discrete"
            attributeName="fill"
-           begin="1s"
+           begin="0.5s"
            values="e400ff;0ce4e4;00ff00;ffff00;ff0000"
-           dur="25s"
+           dur="5"
+           repeatCount="indefinite" />
+        <animate
+           calcMode="discrete"
+           attributeName="opacity"
+           values="1;0;1"
+           dur="1s"
            repeatCount="indefinite" />
       </path>
       <path
-         style="display:inline;mix-blend-mode:normal;fill:#ffffff;fill-opacity:0.35;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 40,82.000005 v 2 h -1 v 2 h -1 v 2 h -1 v 2 h -1 v 2 h -1 v 2 h -1 v 2 h -1 v 2 h 27 v -2 h -1 v -2 h -1 v -2 h -1 v -2 h -1 v -2 h -1 v -2 h -1 v -2 h -1 v -2"
+         style="display:inline;mix-blend-mode:normal;fill:#ffffff;fill-opacity:0.5;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 40,82 v 2 h -1 v 2 h -1 v 2 h -1 v 2 h -1 v 2 h -1 v 2 h -1 v 2 h -1 v 2 h 27 v -2 h -1 v -2 h -1 v -2 h -1 v -2 h -1 v -2 h -1 v -2 h -1 v -2 h -1 v -2"
          id="path37674"
-         sodipodi:nodetypes="cccccccccccccccccccccccccccccccc" />
+         sodipodi:nodetypes="cccccccccccccccccccccccccccccccc"
+         inkscape:label="saucer_beam_color">
+        <animate
+           calcMode="discrete"
+           attributeName="opacity"
+           values="1;0;1"
+           dur="1s"
+           repeatCount="indefinite" />
+      </path>
     </g>
     <g
        id="g54729"
@@ -1052,6 +1061,20 @@
        id="g215243"
        inkscape:label="lunars"
        style="display:inline">
+      <animateTransform
+         attributeName="transform"
+         attributeType="xml"
+         dur="0.2s"
+         repeatCount="1"
+         begin="click"
+         type="translate"
+         values="0,0; 0,1; 0,0;" />
+      <path
+         id="path1315"
+         style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         inkscape:label="head_back"
+         d="m 43,23 v 1 h -3 v 1 h -2 v 1 h -2 v 1 h -1 v 1 h -1 v 1 h -1 v 1 h -1 v 2 h -1 v 1 h -1 v 2 h -1 v 4 h -1 v 7 h 1 v 2 h 1 v 2 h 1 v 1 h 1 v 1 h 1 v 1 h 1 v 1 h 2 v 1 h 2 v 1 h 3 v 1 h 11 v -1 h 3 v -1 h 2 v -1 h 2 v -1 h 1 v -1 h 1 v -1 h 1 v -1 h 1 v -2 h 1 v -2 h 1 v -7 h -1 v -4 h -1 v -2 h -1 v -1 h -1 v -2 h -1 v -1 h -1 v -1 h -1 v -1 h -1 v -1 h -2 v -1 h -2 v -1 h -3 v -1 z"
+         sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc" />
       <g
          id="g22"
          style="display:inline"
@@ -1598,7 +1621,7 @@
       <g
          id="g3401"
          inkscape:label="ox"
-         style="display:inline"
+         style="display:none"
          sodipodi:insensitive="true">
         <path
            id="path6731"
@@ -1673,7 +1696,7 @@
       <g
          id="g38668"
          inkscape:label="rat"
-         style="display:none">
+         style="display:inline">
         <path
            d="m 29,39 v 7 h 1 v 2 h 1 v 2 h 1 v 1 h 1 v 1 h 1 v 1 h 2 v 1 h 2 v 1 h 3 v 1 h 11 v -1 h 3 v -1 h 2 v -1 h 2 v -1 h 1 v -1 h 1 v -1 h 1 v -2 h 1 v -2 h 1 v -7 h -1 v -4 h -1 v -2 h -1 v -1 h -1 v -2 h -1 v -1 h -1 v -1 h -1 v -1 h -2 v -1 h -2 v -1 h -3 v -1 h -7 v 1 h -3 v 1 h -2 v 1 h -2 v 1 h -1 v 1 h -1 v 1 h -1 v 2 h -1 v 1 h -1 v 2 h -1 v 4"
            fill="#b49379"
@@ -1807,6 +1830,388 @@
            style="fill:#000000;fill-opacity:0.15;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
            d="m 33,39 v 1 h 1 v -1 z m 0,1 h -1 v 1 h 1 z m -1,1 h -3 v 5 h 1 v -4 h 2 z m -2,5 v 2 h 1 v -2 z m 1,2 v 2 h 1 v -2 z m 1,2 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 1,1 v 1 h 2 v -1 z m 2,1 v 1 h 2 v -1 z m 2,1 v 1 h 3 v -1 z m 3,1 v 1 h 5 1 5 v -1 h -5 -1 z m 11,0 h 3 v -1 h -3 z m 3,-1 h 2 v -1 h -2 z m 2,-1 h 2 v -1 h -2 z m 2,-1 h 1 v -1 h -1 z m 1,-1 h 1 v -1 h -1 z m 1,-1 h 1 v -2 h -1 z m 1,-2 h 1 v -2 h -1 z m 1,-2 h 1 v -5 h -3 v 1 h 2 z m -2,-5 v -1 h -1 v 1 z m -1,-1 v -1 h -1 v 1 z" />
       </g>
+      <g
+         id="g40"
+         style="display:inline"
+         inkscape:label="face"
+         onclick="fhf()">
+        <path
+           d="m 44,39 h -3 v 1 h -2 v 1 h -2 v 1 h -1 v 1 h -1 v 2 h -1 v 2 h 1 v 2 h 1 v 1 h 1 v 1 h 2 v 1 h 2 v 1 h 3 v 1 h 5 v -1 h 3 v -1 h 2 v -1 h 2 v -1 h 1 v -1 h 1 v -2 h 1 v -2 h -1 v -2 h -1 v -1 h -1 v -1 h -2 v -1 h -2 v -1 h -3 v -1 h -5 z"
+           id="path24"
+           style="display:inline"
+           sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+           inkscape:label="face_contour"
+           sodipodi:insensitive="true" />
+        <path
+           d="m 36,49 v -2 h -1 v -2 h 1 v -2 h 1 v -1 h 2 v -1 h 2 v -1 h 3 v -1 h 5 v 1 h 3 v 1 h 2 v 1 h 2 v 1 h 1 v 2 h 1 v 2 h -1 v 2 h -1 v 1 h -2 v 1 h -2 v 1 h -3 v 1 h -5 v -1 h -3 v -1 h -2 v -1 h -2 v -1 z"
+           fill="#f2e5c7"
+           id="path26"
+           style="display:inline"
+           sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccc"
+           inkscape:label="skin" />
+        <path
+           style="display:inline;fill:#000000;fill-opacity:0.15;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 37,42 h 2 v -1 h 2 v -1 h 3 v -1 h 5 v 1 h 3 v 1 h 2 v 1 h 2 v 1 h -2 v -1 h -2 v -1 h -3 v -1 h -5 v 1 h -3 v 1 h -2 v 1 h -2 v -1"
+           id="path423370"
+           inkscape:label="face_shadow" />
+        <g
+           id="f8"
+           style="display:none"
+           inkscape:label="happy">
+          <path
+             id="path30"
+             d="m 45,48 v 1 h 1 v -1 z m 1,1 v 1 h 3 v -1 z m 3,0 h 1 v -1 h -1 z"
+             style="display:inline"
+             sodipodi:nodetypes="ccccccccccccccc" />
+          <path
+             d="m 40,45 v 1 h 3 v -1 z m 10,0 v 1 h 3 v -1 z"
+             fill="#f6b2a0"
+             id="path34"
+             sodipodi:nodetypes="cccccccccc"
+             style="display:inline" />
+          <path
+             id="path77388"
+             style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 41,43 v 1 h 3 v -1 z m 8,0 v 1 h 3 v -1 z"
+             sodipodi:nodetypes="cccccccccc"
+             inkscape:label="eyesclosed" />
+          <g
+             id="g79096"
+             inkscape:label="eyesopen"
+             style="display:inline">
+            <animate
+               id="e"
+               calcMode="discrete"
+               attributeName="opacity"
+               values="1;0;1"
+               begin="3s;e.end+3s"
+               dur="0.3s" />
+            <path
+               id="path78911"
+               d="m 41,42 v 3 h 3 v -3 z m 8,0 v 3 h 3 v -3 z"
+               style="display:inline"
+               sodipodi:nodetypes="cccccccccc" />
+            <path
+               d="m 42,43 v 1 h 1 v -1 z m 8,0 v 1 h 1 v -1 z"
+               fill="#ffffff"
+               id="path32"
+               sodipodi:nodetypes="cccccccccc"
+               style="display:inline"
+               inkscape:label="path32" />
+          </g>
+        </g>
+        <g
+           id="f7"
+           style="display:none"
+           inkscape:label="sad">
+          <path
+             id="path1363"
+             style="display:inline"
+             d="m 47,48 v 1 h 2 v -1 z m 2,1 v 1 h 1 v -1 z m -2,0 h -1 v 1 h 1 z"
+             sodipodi:nodetypes="ccccccccccccccc" />
+          <path
+             d="m 42,43 v 1 h 1 v -1 z m 8,0 v 1 h 1 v -1 z"
+             fill="#ffffff"
+             id="path1365"
+             sodipodi:nodetypes="cccccccccc"
+             style="display:none" />
+          <path
+             id="path81208"
+             style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 41,43 v 1 h 3 v -1 z m 8,0 v 1 h 3 v -1 z"
+             sodipodi:nodetypes="cccccccccc"
+             inkscape:label="eyesclosed" />
+          <g
+             id="g81123"
+             inkscape:label="eyesopen"
+             style="display:inline">
+            <animate
+               id="e"
+               calcMode="discrete"
+               attributeName="opacity"
+               values="1;0;1"
+               begin="3s;e.end+3s"
+               dur="0.3s" />
+            <path
+               id="path81119"
+               d="m 41,42 v 2 h 1 v 1 h 2 v -3 z m 8,0 v 3 h 2 v -1 h 1 v -2 z"
+               style="display:inline"
+               sodipodi:nodetypes="cccccccccccccc" />
+            <path
+               d="m 42,43 v 1 h 1 v -1 z m 8,0 v 1 h 1 v -1 z"
+               fill="#ffffff"
+               id="path81121"
+               sodipodi:nodetypes="cccccccccc"
+               style="display:inline"
+               inkscape:label="path32" />
+          </g>
+          <path
+             d="m 40,44 v 1 h 2 v -1 z m 11,0 v 1 h 2 v -1 z"
+             fill="#f6b2a0"
+             id="path1367"
+             sodipodi:nodetypes="cccccccccc"
+             style="display:inline;fill:#a4eeff;fill-opacity:1" />
+        </g>
+        <g
+           id="f6"
+           style="display:none"
+           inkscape:label="tired">
+          <g
+             id="g84527"
+             style="display:inline">
+            <path
+               id="path84521"
+               d="m 44,42 v 1 h 1 v -1 z m 0,1 h -2 v 1 h 2 z m 5,-1 v 1 h 1 v -1 z m 1,1 v 1 h 2 v -1 z m -7,2 v 1 h 2 v -1 z m 6,0 v 1 h 2 v -1 z m -3,2 v 1 h -1 v 1 h 1 v 1 h 4 v -1 h 1 v -1 h -1 v -1 z"
+               sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccc"
+               style="display:inline" />
+            <g
+               id="g84916">
+              <animateTransform
+                 attributeName="transform"
+                 attributeType="xml"
+                 dur="4s"
+                 repeatCount="indefinite"
+                 type="translate"
+                 values="0,0; 0,-1; 0,0;" />
+              <path
+                 style="display:inline;fill:#27aef2;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 48,49 v 1 h 1 v -1"
+                 id="path84523"
+                 sodipodi:nodetypes="cccc"
+                 inkscape:label="drip" />
+              <path
+                 style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 48,50 v 1 h 1 v -1 h -1"
+                 id="path85160" />
+            </g>
+            <path
+               style="display:inline;fill:#c9725b;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+               d="m 46,48 v 1 h 4 v -1"
+               id="path84525"
+               sodipodi:nodetypes="cccc" />
+            <g
+               id="g48196"
+               style="display:inline"
+               inkscape:label="zzz">
+              <animateTransform
+                 attributeName="transform"
+                 attributeType="xml"
+                 dur="3s"
+                 repeatCount="indefinite"
+                 type="translate"
+                 values="0; 9,-9;" />
+              <animate
+                 attributeName="opacity"
+                 values="1;0"
+                 dur="3s"
+                 repeatCount="indefinite" />
+              <path
+                 style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 54,39 v -1 h 4 v 1 h 1 v 1 h -1 v 2 h 1 v 1 h -1 v 1 h -4 v -1 h -1 v -1 h 1 v -2 h -1 v -1 h 1"
+                 id="path48093"
+                 sodipodi:nodetypes="ccccccccccccccccccccc" />
+              <path
+                 style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 54,39 v 1 h 2 v 1 h -1 v 1 h -1 v 1 h 4 v -1 h -2 v -1 h 1 v -1 h 1 v -1"
+                 id="path47893"
+                 sodipodi:nodetypes="cccccccccccccccc" />
+            </g>
+          </g>
+        </g>
+        <g
+           id="f5"
+           style="display:none"
+           inkscape:label="duckface">
+          <path
+             d="m 40,45 v 1 h 3 v -1 z m 10,0 v 1 h 3 v -1 z"
+             fill="#f6b2a0"
+             id="path195639"
+             style="display:inline"
+             sodipodi:nodetypes="cccccccccc" />
+          <path
+             style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 41,44 v -1 h 1 v -1 h 1 v 1 h 1 v 1 h -1 v -1 h -1 v 1 m 7,0 v -1 h 1 v -1 h 1 v 1 h 1 v 1 h -1 v -1 h -1 v 1"
+             id="path196081"
+             sodipodi:nodetypes="cccccccccccccccccccccccc"
+             inkscape:label="brows">
+            <animateTransform
+               attributeName="transform"
+               calcMode="discrete"
+               attributeType="xml"
+               dur="4s"
+               repeatCount="indefinite"
+               type="translate"
+               values="0; 0,-0.5; 0; 0,-0.5; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0" />
+          </path>
+          <path
+             style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 48,47 v 1 h -1 v 1 h 1 v 1 h 1 v -1 h -1 v -1 h 1 v -1"
+             id="path197845"
+             sodipodi:nodetypes="cccccccccccc" />
+          <path
+             style="display:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 47,47 v 1 h -1 v 1 h 1 v 1 h 1 v -1 h -1 v -1 h 1 v -1"
+             id="path18711"
+             sodipodi:nodetypes="cccccccccccc" />
+        </g>
+        <g
+           id="f4"
+           inkscape:label="excited"
+           style="display:none">
+          <path
+             id="path95140"
+             style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 44,42 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 0,1 h -1 v 1 h 1 z m 6,-2 v 1 h 1 v -1 z m 0,1 h -1 v 1 h 1 z m 0,1 v 1 h 1 v -1 z m -5,3 v 4 h 1 v 1 h 2 v -1 h 1 v -4 z" />
+          <path
+             id="path99309"
+             style="display:inline;fill:#ff8a61;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 41,45 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 1,0 h 1 v -1 h -1 z m 1,0 v 1 h 1 v -1 z m 8,-1 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 1,0 h 1 v -1 h -1 z m -2,0 h -1 v 1 h 1 z m -5,2 v 3 h 2 v -3 z" />
+        </g>
+        <g
+           id="f3"
+           inkscape:label="happy_cry"
+           style="display:none">
+          <path
+             style="display:inline;fill:#a9e2fe;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 41,45 v 7 h 2 v -7 m 7,0 v 7 h 2 v -7"
+             id="path104987"
+             sodipodi:nodetypes="cccccccc" />
+          <path
+             style="display:inline;fill:#81d5fe;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 41,46 v 1 h 2 v -1 m -2,2 v 1 h 2 v -1 m -2,2 v 1 h 2 v -1 m 7,-4 v 1 h 2 v -1 m -2,2 v 1 h 2 v -1 m -2,2 v 1 h 2 V 50 M 41,44 v 1 h 2 v -1 m 7,0 v 1 h 2 v -1"
+             id="path157093"
+             sodipodi:nodetypes="cccccccccccccccccccccccccccccccc"
+             inkscape:label="tears">
+            <animateTransform
+               attributeName="transform"
+               attributeType="xml"
+               dur="0.5s"
+               repeatCount="indefinite"
+               type="translate"
+               values="0,0; 0,2;" />
+          </path>
+          <path
+             id="path102787"
+             style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 41,41 v 1 h 2 v -1 z m 0,1 h -1 v 1 h 1 z m 9,-1 v 1 h 2 v -1 z m 2,1 v 1 h 1 v -1 z m -11,2 v 1 h 3 v -1 z m 8,0 v 1 h 3 v -1 z m -6,3 v 1 h 1 v -1 z m 1,1 v 3 h 1 v 1 h 3 v -1 h 1 v -3 h -1 v -1 h -3 v 1 z m 5,0 h 1 v -1 h -1 z m -8,4 v 1 h 3 v -1 z m 8,0 v 1 h 3 v -1 z"
+             sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc" />
+          <path
+             style="display:inline;fill:#ffc0ae;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 45,48 v 3 h 3 v -3"
+             id="path111580"
+             sodipodi:nodetypes="cccc" />
+          <path
+             style="display:inline;fill:#e05c46;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 45,50 v 1 h 3 v -1 z"
+             id="path120165"
+             sodipodi:nodetypes="ccccc" />
+        </g>
+        <g
+           id="f2"
+           inkscape:label="cry"
+           style="display:none">
+          <path
+             style="display:inline;fill:#a9e2fe;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 41,45 v 7 h 2 v -7 m 7,0 v 7 h 2 v -7"
+             id="path127503"
+             sodipodi:nodetypes="cccccccc" />
+          <path
+             style="display:none;fill:#ffc0ae;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 46,48 v 3 h 2 v -3"
+             id="path127505"
+             sodipodi:nodetypes="cccc" />
+          <path
+             style="display:none;fill:#e05c46;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 46,50 v 1 h 2 v -1 z"
+             id="path127507" />
+          <path
+             style="display:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 45,51 v 1 h 5 v -1"
+             id="path127582"
+             sodipodi:nodetypes="cccc" />
+          <path
+             style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 44,50 v -1 h 1 v -1 h 1 v 1 1 h 1 v -2 h 1 v 2 h 1 v -1 h -4 v 1 z"
+             id="path128196"
+             sodipodi:nodetypes="cccccccccccccccc" />
+          <path
+             style="display:inline;fill:#67ccfe;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 41,46 v 1 h 2 v -1 m -2,2 v 1 h 2 v -1 m -2,2 v 1 h 2 v -1 m 7,-4 v 1 h 2 v -1 m -2,2 v 1 h 2 v -1 m -2,2 v 1 h 2 V 50 M 41,44 v 1 h 2 v -1 m 7,0 v 1 h 2 v -1"
+             id="path129358"
+             sodipodi:nodetypes="cccccccccccccccccccccccccccccccc"
+             inkscape:label="tears">
+            <animateTransform
+               attributeName="transform"
+               attributeType="xml"
+               dur="0.5s"
+               repeatCount="indefinite"
+               type="translate"
+               values="0,0; 0,2;" />
+          </path>
+          <path
+             id="path127501"
+             style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 50,43 v -1 h 2 v 1 z m 0,-1 h -1 v -1 h 1 z m -9,1 v -1 h 2 v 1 z m 2,-1 v -1 h 1 v 1 z m -2,3 v -1 h 3 v 1 z m 8,0 v -1 h 3 v 1 z m -8,8 v -1 h 3 v 1 z m 8,0 v -1 h 3 v 1 z"
+             sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccc" />
+          <path
+             style="display:none;fill:#a9e2fe;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 41,45 v 7 h 2 v -7 m 7,0 v 7 h 2 v -7"
+             id="path1743"
+             sodipodi:nodetypes="cccccccc" />
+        </g>
+        <g
+           id="f1"
+           inkscape:label="star_eyes"
+           style="display:none">
+          <path
+             id="path138461"
+             style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 43,42 v 1 h -1 v 1 h 1 v 1 h 1 v -1 h 1 v -1 h -1 v -1 z m 7,0 v 1 h -1 v 1 h 1 v 1 h 1 v -1 h 1 v -1 h -1 v -1 z m -6,6 v 1 h 1 v -1 z m 1,1 v 2 h 1 v 1 h 2 v -1 h 1 v -2 h -1 v -1 h -2 v 1 z m 4,0 h 1 v -1 h -1 z" />
+          <path
+             style="display:inline;fill:#ee626d;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 46,49 v 2 h 2 v -2"
+             id="path141007"
+             sodipodi:nodetypes="cccc" />
+          <path
+             style="display:inline;fill:#fff53f;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 43,43 v 1 h 1 v -1 m 6,0 v 1 h 1 v -1"
+             id="shiny"
+             sodipodi:nodetypes="cccccccc"
+             inkscape:label="shiny">
+            <animate
+               calcMode="discrete"
+               attributeName="fill"
+               values="#808080;#fff53f;#808080"
+               dur="0.33s"
+               repeatCount="indefinite" />
+          </path>
+        </g>
+        <g
+           id="f0"
+           inkscape:label="serious"
+           style="display:none">
+          <path
+             id="path144951"
+             style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 40,43 v 1 h 1 v 1 1 h 1 2 v -2 h 1 v -1 z m 12,0 h -4 v 1 h 1 v 2 h 3 v -2 h 1 v -1 z m -7,5 v 1 h 3 v -1 z m 3,1 v 1 h 1 v -1 z"
+             sodipodi:nodetypes="ccccccccccccccccccccccccccccccc" />
+          <path
+             style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 42,44 v 1 h 1 v -1 m 7,0 v 1 h 1 v -1"
+             id="path147865"
+             sodipodi:nodetypes="cccccccc" />
+        </g>
+        <g
+           id="fx"
+           inkscape:label="hit"
+           style="display:none">
+          <path
+             id="path1746"
+             style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 41,43 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 1,0 h 1 v -1 h -1 z m 0,1 v 1 h 1 v -1 z m -1,0 h -1 v 1 h 1 z m 7,-2 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 1,0 h 1 v -1 h -1 z m 0,1 v 1 h 1 v -1 z m -1,0 h -1 v 1 h 1 z m -5,3 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 1,0 h 1 v -1 h -1 z m 1,0 v 1 h 1 v -1 z m -3,0 h -1 v 1 h 1 z"
+             sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc" />
+        </g>
+      </g>
     </g>
     <g
        id="g20"
@@ -1816,388 +2221,6 @@
          style="display:inline;fill:#000000;fill-opacity:0.15;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="m 31,33 v 2 h -1 v 4 h -1 v 7 h 1 v 2 h 1 v 2 h 1 v 2 h 2 v 1 h 2 v 1 h 2 v 1 h 3 v 1 h 11 v -1 h 3 v -1 h 2 v -1 h 2 v -1 h 2 v -2 h 1 v -2 h 1 v -2 h 1 v -7 h -1 v -4 h -1 v -2 h -1 v 2 h 1 v 4 h 1 v 7 h -1 v 1 h -1 v 3 h -1 v 1 h -1 v 1 h -2 v 1 h -2 v 1 h -3 v 1 H 41 v -1 h -3 v -1 h -2 v -1 h -2 v -1 h -1 v -1 h -1 v -2 h -1 v -2 h -1 v -7 h 1 v -4 h 1 v -2 z"
          id="path429011" />
-    </g>
-    <g
-       id="g40"
-       style="display:inline"
-       inkscape:label="face"
-       onclick="fhf()">
-      <path
-         d="m 44,39 h -3 v 1 h -2 v 1 h -2 v 1 h -1 v 1 h -1 v 2 h -1 v 2 h 1 v 2 h 1 v 1 h 1 v 1 h 2 v 1 h 2 v 1 h 3 v 1 h 5 v -1 h 3 v -1 h 2 v -1 h 2 v -1 h 1 v -1 h 1 v -2 h 1 v -2 h -1 v -2 h -1 v -1 h -1 v -1 h -2 v -1 h -2 v -1 h -3 v -1 h -5 z"
-         id="path24"
-         style="display:inline"
-         sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccc"
-         inkscape:label="face_contour"
-         sodipodi:insensitive="true" />
-      <path
-         d="m 36,49 v -2 h -1 v -2 h 1 v -2 h 1 v -1 h 2 v -1 h 2 v -1 h 3 v -1 h 5 v 1 h 3 v 1 h 2 v 1 h 2 v 1 h 1 v 2 h 1 v 2 h -1 v 2 h -1 v 1 h -2 v 1 h -2 v 1 h -3 v 1 h -5 v -1 h -3 v -1 h -2 v -1 h -2 v -1 z"
-         fill="#f2e5c7"
-         id="path26"
-         style="display:inline"
-         sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccc"
-         inkscape:label="skin" />
-      <path
-         style="display:inline;fill:#000000;fill-opacity:0.15;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 37,42 h 2 v -1 h 2 v -1 h 3 v -1 h 5 v 1 h 3 v 1 h 2 v 1 h 2 v 1 h -2 v -1 h -2 v -1 h -3 v -1 h -5 v 1 h -3 v 1 h -2 v 1 h -2 v -1"
-         id="path423370"
-         inkscape:label="face_shadow" />
-      <g
-         id="f8"
-         style="display:none"
-         inkscape:label="happy">
-        <path
-           id="path30"
-           d="m 45,48 v 1 h 1 v -1 z m 1,1 v 1 h 3 v -1 z m 3,0 h 1 v -1 h -1 z"
-           style="display:inline"
-           sodipodi:nodetypes="ccccccccccccccc" />
-        <path
-           d="m 40,45 v 1 h 3 v -1 z m 10,0 v 1 h 3 v -1 z"
-           fill="#f6b2a0"
-           id="path34"
-           sodipodi:nodetypes="cccccccccc"
-           style="display:inline" />
-        <path
-           id="path77388"
-           style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 41,43 v 1 h 3 v -1 z m 8,0 v 1 h 3 v -1 z"
-           sodipodi:nodetypes="cccccccccc"
-           inkscape:label="eyesclosed" />
-        <g
-           id="g79096"
-           inkscape:label="eyesopen"
-           style="display:inline">
-          <animate
-             id="e"
-             calcMode="discrete"
-             attributeName="opacity"
-             values="1;0;1"
-             begin="3s;e.end+3s"
-             dur="0.3s" />
-          <path
-             id="path78911"
-             d="m 41,42 v 3 h 3 v -3 z m 8,0 v 3 h 3 v -3 z"
-             style="display:inline"
-             sodipodi:nodetypes="cccccccccc" />
-          <path
-             d="m 42,43 v 1 h 1 v -1 z m 8,0 v 1 h 1 v -1 z"
-             fill="#ffffff"
-             id="path32"
-             sodipodi:nodetypes="cccccccccc"
-             style="display:inline"
-             inkscape:label="path32" />
-        </g>
-      </g>
-      <g
-         id="f7"
-         style="display:none"
-         inkscape:label="sad">
-        <path
-           id="path1363"
-           style="display:inline"
-           d="m 47,48 v 1 h 2 v -1 z m 2,1 v 1 h 1 v -1 z m -2,0 h -1 v 1 h 1 z"
-           sodipodi:nodetypes="ccccccccccccccc" />
-        <path
-           d="m 42,43 v 1 h 1 v -1 z m 8,0 v 1 h 1 v -1 z"
-           fill="#ffffff"
-           id="path1365"
-           sodipodi:nodetypes="cccccccccc"
-           style="display:none" />
-        <path
-           id="path81208"
-           style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 41,43 v 1 h 3 v -1 z m 8,0 v 1 h 3 v -1 z"
-           sodipodi:nodetypes="cccccccccc"
-           inkscape:label="eyesclosed" />
-        <g
-           id="g81123"
-           inkscape:label="eyesopen"
-           style="display:inline">
-          <animate
-             id="e"
-             calcMode="discrete"
-             attributeName="opacity"
-             values="1;0;1"
-             begin="3s;e.end+3s"
-             dur="0.3s" />
-          <path
-             id="path81119"
-             d="m 41,42 v 2 h 1 v 1 h 2 v -3 z m 8,0 v 3 h 2 v -1 h 1 v -2 z"
-             style="display:inline"
-             sodipodi:nodetypes="cccccccccccccc" />
-          <path
-             d="m 42,43 v 1 h 1 v -1 z m 8,0 v 1 h 1 v -1 z"
-             fill="#ffffff"
-             id="path81121"
-             sodipodi:nodetypes="cccccccccc"
-             style="display:inline"
-             inkscape:label="path32" />
-        </g>
-        <path
-           d="m 40,44 v 1 h 2 v -1 z m 11,0 v 1 h 2 v -1 z"
-           fill="#f6b2a0"
-           id="path1367"
-           sodipodi:nodetypes="cccccccccc"
-           style="display:inline;fill:#a4eeff;fill-opacity:1" />
-      </g>
-      <g
-         id="f6"
-         style="display:none"
-         inkscape:label="tired">
-        <g
-           id="g84527"
-           style="display:inline">
-          <path
-             id="path84521"
-             d="m 44,42 v 1 h 1 v -1 z m 0,1 h -2 v 1 h 2 z m 5,-1 v 1 h 1 v -1 z m 1,1 v 1 h 2 v -1 z m -7,2 v 1 h 2 v -1 z m 6,0 v 1 h 2 v -1 z m -3,2 v 1 h -1 v 1 h 1 v 1 h 4 v -1 h 1 v -1 h -1 v -1 z"
-             sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccc"
-             style="display:inline" />
-          <g
-             id="g84916">
-            <animateTransform
-               attributeName="transform"
-               attributeType="xml"
-               dur="4s"
-               repeatCount="indefinite"
-               type="translate"
-               values="0,0; 0,-1; 0,0;" />
-            <path
-               style="display:inline;fill:#27aef2;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-               d="m 48,49 v 1 h 1 v -1"
-               id="path84523"
-               sodipodi:nodetypes="cccc"
-               inkscape:label="drip" />
-            <path
-               style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-               d="m 48,50 v 1 h 1 v -1 h -1"
-               id="path85160" />
-          </g>
-          <path
-             style="display:inline;fill:#c9725b;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-             d="m 46,48 v 1 h 4 v -1"
-             id="path84525"
-             sodipodi:nodetypes="cccc" />
-          <g
-             id="g48196"
-             style="display:inline"
-             inkscape:label="zzz">
-            <animateTransform
-               attributeName="transform"
-               attributeType="xml"
-               dur="3s"
-               repeatCount="indefinite"
-               type="translate"
-               values="0; 9,-9;" />
-            <animate
-               attributeName="opacity"
-               values="1;0"
-               dur="3s"
-               repeatCount="indefinite" />
-            <path
-               style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-               d="m 54,39 v -1 h 4 v 1 h 1 v 1 h -1 v 2 h 1 v 1 h -1 v 1 h -4 v -1 h -1 v -1 h 1 v -2 h -1 v -1 h 1"
-               id="path48093"
-               sodipodi:nodetypes="ccccccccccccccccccccc" />
-            <path
-               style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-               d="m 54,39 v 1 h 2 v 1 h -1 v 1 h -1 v 1 h 4 v -1 h -2 v -1 h 1 v -1 h 1 v -1"
-               id="path47893"
-               sodipodi:nodetypes="cccccccccccccccc" />
-          </g>
-        </g>
-      </g>
-      <g
-         id="f5"
-         style="display:none"
-         inkscape:label="duckface">
-        <path
-           d="m 40,45 v 1 h 3 v -1 z m 10,0 v 1 h 3 v -1 z"
-           fill="#f6b2a0"
-           id="path195639"
-           style="display:inline"
-           sodipodi:nodetypes="cccccccccc" />
-        <path
-           style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 41,44 v -1 h 1 v -1 h 1 v 1 h 1 v 1 h -1 v -1 h -1 v 1 m 7,0 v -1 h 1 v -1 h 1 v 1 h 1 v 1 h -1 v -1 h -1 v 1"
-           id="path196081"
-           sodipodi:nodetypes="cccccccccccccccccccccccc"
-           inkscape:label="brows">
-          <animateTransform
-             attributeName="transform"
-             calcMode="discrete"
-             attributeType="xml"
-             dur="4s"
-             repeatCount="indefinite"
-             type="translate"
-             values="0; 0,-0.5; 0; 0,-0.5; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0" />
-        </path>
-        <path
-           style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 48,47 v 1 h -1 v 1 h 1 v 1 h 1 v -1 h -1 v -1 h 1 v -1"
-           id="path197845"
-           sodipodi:nodetypes="cccccccccccc" />
-        <path
-           style="display:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 47,47 v 1 h -1 v 1 h 1 v 1 h 1 v -1 h -1 v -1 h 1 v -1"
-           id="path18711"
-           sodipodi:nodetypes="cccccccccccc" />
-      </g>
-      <g
-         id="f4"
-         inkscape:label="excited"
-         style="display:none">
-        <path
-           id="path95140"
-           style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 44,42 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 0,1 h -1 v 1 h 1 z m 6,-2 v 1 h 1 v -1 z m 0,1 h -1 v 1 h 1 z m 0,1 v 1 h 1 v -1 z m -5,3 v 4 h 1 v 1 h 2 v -1 h 1 v -4 z" />
-        <path
-           id="path99309"
-           style="display:inline;fill:#ff8a61;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 41,45 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 1,0 h 1 v -1 h -1 z m 1,0 v 1 h 1 v -1 z m 8,-1 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 1,0 h 1 v -1 h -1 z m -2,0 h -1 v 1 h 1 z m -5,2 v 3 h 2 v -3 z" />
-      </g>
-      <g
-         id="f3"
-         inkscape:label="happy_cry"
-         style="display:none">
-        <path
-           style="display:inline;fill:#a9e2fe;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 41,45 v 7 h 2 v -7 m 7,0 v 7 h 2 v -7"
-           id="path104987"
-           sodipodi:nodetypes="cccccccc" />
-        <path
-           style="display:inline;fill:#81d5fe;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 41,46 v 1 h 2 v -1 m -2,2 v 1 h 2 v -1 m -2,2 v 1 h 2 v -1 m 7,-4 v 1 h 2 v -1 m -2,2 v 1 h 2 v -1 m -2,2 v 1 h 2 V 50 M 41,44 v 1 h 2 v -1 m 7,0 v 1 h 2 v -1"
-           id="path157093"
-           sodipodi:nodetypes="cccccccccccccccccccccccccccccccc"
-           inkscape:label="tears">
-          <animateTransform
-             attributeName="transform"
-             attributeType="xml"
-             dur="0.5s"
-             repeatCount="indefinite"
-             type="translate"
-             values="0,0; 0,2;" />
-        </path>
-        <path
-           id="path102787"
-           style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 41,41 v 1 h 2 v -1 z m 0,1 h -1 v 1 h 1 z m 9,-1 v 1 h 2 v -1 z m 2,1 v 1 h 1 v -1 z m -11,2 v 1 h 3 v -1 z m 8,0 v 1 h 3 v -1 z m -6,3 v 1 h 1 v -1 z m 1,1 v 3 h 1 v 1 h 3 v -1 h 1 v -3 h -1 v -1 h -3 v 1 z m 5,0 h 1 v -1 h -1 z m -8,4 v 1 h 3 v -1 z m 8,0 v 1 h 3 v -1 z"
-           sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc" />
-        <path
-           style="display:inline;fill:#ffc0ae;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 45,48 v 3 h 3 v -3"
-           id="path111580"
-           sodipodi:nodetypes="cccc" />
-        <path
-           style="display:inline;fill:#e05c46;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 45,50 v 1 h 3 v -1 z"
-           id="path120165"
-           sodipodi:nodetypes="ccccc" />
-      </g>
-      <g
-         id="f2"
-         inkscape:label="cry"
-         style="display:none">
-        <path
-           style="display:inline;fill:#a9e2fe;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 41,45 v 7 h 2 v -7 m 7,0 v 7 h 2 v -7"
-           id="path127503"
-           sodipodi:nodetypes="cccccccc" />
-        <path
-           style="display:none;fill:#ffc0ae;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 46,48 v 3 h 2 v -3"
-           id="path127505"
-           sodipodi:nodetypes="cccc" />
-        <path
-           style="display:none;fill:#e05c46;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 46,50 v 1 h 2 v -1 z"
-           id="path127507" />
-        <path
-           style="display:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 45,51 v 1 h 5 v -1"
-           id="path127582"
-           sodipodi:nodetypes="cccc" />
-        <path
-           style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 44,50 v -1 h 1 v -1 h 1 v 1 1 h 1 v -2 h 1 v 2 h 1 v -1 h -4 v 1 z"
-           id="path128196"
-           sodipodi:nodetypes="cccccccccccccccc" />
-        <path
-           style="display:inline;fill:#67ccfe;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 41,46 v 1 h 2 v -1 m -2,2 v 1 h 2 v -1 m -2,2 v 1 h 2 v -1 m 7,-4 v 1 h 2 v -1 m -2,2 v 1 h 2 v -1 m -2,2 v 1 h 2 V 50 M 41,44 v 1 h 2 v -1 m 7,0 v 1 h 2 v -1"
-           id="path129358"
-           sodipodi:nodetypes="cccccccccccccccccccccccccccccccc"
-           inkscape:label="tears">
-          <animateTransform
-             attributeName="transform"
-             attributeType="xml"
-             dur="0.5s"
-             repeatCount="indefinite"
-             type="translate"
-             values="0,0; 0,2;" />
-        </path>
-        <path
-           id="path127501"
-           style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 50,43 v -1 h 2 v 1 z m 0,-1 h -1 v -1 h 1 z m -9,1 v -1 h 2 v 1 z m 2,-1 v -1 h 1 v 1 z m -2,3 v -1 h 3 v 1 z m 8,0 v -1 h 3 v 1 z m -8,8 v -1 h 3 v 1 z m 8,0 v -1 h 3 v 1 z"
-           sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccc" />
-        <path
-           style="display:none;fill:#a9e2fe;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 41,45 v 7 h 2 v -7 m 7,0 v 7 h 2 v -7"
-           id="path1743"
-           sodipodi:nodetypes="cccccccc" />
-      </g>
-      <g
-         id="f1"
-         inkscape:label="star_eyes"
-         style="display:none">
-        <path
-           id="path138461"
-           style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 43,42 v 1 h -1 v 1 h 1 v 1 h 1 v -1 h 1 v -1 h -1 v -1 z m 7,0 v 1 h -1 v 1 h 1 v 1 h 1 v -1 h 1 v -1 h -1 v -1 z m -6,6 v 1 h 1 v -1 z m 1,1 v 2 h 1 v 1 h 2 v -1 h 1 v -2 h -1 v -1 h -2 v 1 z m 4,0 h 1 v -1 h -1 z" />
-        <path
-           style="display:inline;fill:#ee626d;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 46,49 v 2 h 2 v -2"
-           id="path141007"
-           sodipodi:nodetypes="cccc" />
-        <path
-           style="display:inline;fill:#fff53f;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 43,43 v 1 h 1 v -1 m 6,0 v 1 h 1 v -1"
-           id="shiny"
-           sodipodi:nodetypes="cccccccc"
-           inkscape:label="shiny">
-          <animate
-             calcMode="discrete"
-             attributeName="fill"
-             values="#808080;#fff53f;#808080"
-             dur="0.33s"
-             repeatCount="indefinite" />
-        </path>
-      </g>
-      <g
-         id="f0"
-         inkscape:label="serious"
-         style="display:none">
-        <path
-           id="path144951"
-           style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 40,43 v 1 h 1 v 1 1 h 1 2 v -2 h 1 v -1 z m 12,0 h -4 v 1 h 1 v 2 h 3 v -2 h 1 v -1 z m -7,5 v 1 h 3 v -1 z m 3,1 v 1 h 1 v -1 z"
-           sodipodi:nodetypes="ccccccccccccccccccccccccccccccc" />
-        <path
-           style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 42,44 v 1 h 1 v -1 m 7,0 v 1 h 1 v -1"
-           id="path147865"
-           sodipodi:nodetypes="cccccccc" />
-      </g>
-      <g
-         id="fx"
-         inkscape:label="hit"
-         style="display:none">
-        <path
-           id="path1746"
-           style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 41,42 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 1,0 h 1 v -1 h -1 z m 0,1 v 1 h 1 v -1 z m -1,0 h -1 v 1 h 1 z m 7,-2 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 1,0 h 1 v -1 h -1 z m 0,1 v 1 h 1 v -1 z m -1,0 h -1 v 1 h 1 z m -5,4 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 1,0 h 1 v -1 h -1 z m 1,0 v 1 h 1 v -1 z m -3,0 h -1 v 1 h 1 z"
-           sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc" />
-      </g>
     </g>
     <g
        id="g237235"
@@ -2252,21 +2275,68 @@
          fill="#56413f"
          id="path138"
          sodipodi:nodetypes="cccccccccccc" />
-      <path
-         d="m 74,34 h 6 v 1 h 8 v 1 h 1 v 6 h -1 v 4 h -1 v 1 h -8 v -1 h -6 v -5 h 1 v -7"
-         id="path140"
-         sodipodi:nodetypes="ccccccccccccccccc" />
-      <path
-         d="m 74,35 h 6 v 1 h 8 v 6 h -1 v 4 h -8 v -1 h -6 v -4 h 1 z"
-         fill="#ff0000"
-         id="path142"
+      <g
+         id="g84943"
+         style="display:none"
+         inkscape:label="flag_1">
+        <animate
+           calcMode="discrete"
+           attributeName="opacity"
+           values="1;0;1"
+           dur="2s"
+           repeatCount="indefinite" />
+        <path
+           d="m 74,34 h 5 v 1 h 4 v -1 h 5 v 1 h 1 v 6 h -1 v 5 h -6 v 1 h -4 v -1 h -5 v -5 h 1 v -7"
+           id="path84937"
+           sodipodi:nodetypes="ccccccccccccccccccc"
+           inkscape:label="contour_old"
+           style="display:inline" />
+        <path
+           d="m 74,35 h 5 v 1 h 4 v -1 h 5 v 6 h -1 v 4 h -5 v 1 h -4 v -1 h -5 v -4 h 1 z"
+           fill="#ff0000"
+           id="path84939"
+           style="display:inline"
+           sodipodi:nodetypes="ccccccccccccccccc"
+           inkscape:label="color_old" />
+        <path
+           d="m 79,36 v 6 h -1 v 4 h 4 v -3 h 1 v -7"
+           fill-opacity="0.15"
+           id="path84941"
+           sodipodi:nodetypes="cccccccc"
+           style="display:inline"
+           inkscape:label="shadow" />
+      </g>
+      <g
+         id="g87203"
          style="display:inline"
-         sodipodi:nodetypes="ccccccccccccc" />
-      <path
-         d="m 80,36 v 6 h -1 v 4 h 2 v -3 h 1 v -7"
-         fill-opacity="0.15"
-         id="path144"
-         sodipodi:nodetypes="cccccccc" />
+         inkscape:label="flag_2">
+        <animate
+           calcMode="discrete"
+           attributeName="opacity"
+           values="0;1;0"
+           dur="2s"
+           repeatCount="indefinite" />
+        <path
+           d="m 74,34 h 1 v 1 h 4 v -1 h 9 v 1 h 1 v 6 h -1 v 5 H 78 v 1 h -4 v -1 h -1 v -5 h 1 v -7"
+           id="path87197"
+           sodipodi:nodetypes="ccccccccccccccccccc"
+           inkscape:label="contour_old"
+           style="display:inline" />
+        <path
+           d="m 74,35 h 1 v 1 h 4 v -1 h 9 v 6 h -1 v 4 h -9 v 1 h -4 v -1 h -1 v -4 h 1 z"
+           fill="#ff0000"
+           id="path87199"
+           style="display:inline"
+           sodipodi:nodetypes="ccccccccccccccccc"
+           inkscape:label="color_old" />
+        <path
+           d="m 75,36 v 6 h -1 v 4 h 4 v -3 h 1 v -7"
+           fill-opacity="0.15"
+           id="path87201"
+           sodipodi:nodetypes="cccccccc"
+           style="display:inline"
+           inkscape:label="shadow" />
+      </g>
     </g>
     <g
        id="g122646"
@@ -2319,32 +2389,85 @@
     <g
        id="g137886"
        inkscape:label="pops"
-       style="display:none">
-      <path
-         style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 69,54 h 3 v -2 h 2 v -1 h 1 v -9 h -1 v -1 h -1 v -1 h -1 v -1 h -3 v 1 h -1 v 1 h -1 v 1 h -1 v 8 1 h 1 v 1 h 2"
-         id="path122969"
-         sodipodi:nodetypes="ccccccccccccccccccccccccc" />
-      <path
-         style="fill:#79e8f3;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 72,40 h -3 v 1 h -1 v 1 h -1 v 8 1 h 2 v 1 h 3 v -1 h 2 v -9 h -1 v -1 h -1"
-         id="path126170"
-         sodipodi:nodetypes="ccccccccccccccccc" />
-      <path
-         style="fill:#f2c8a2;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 70,52 v 2 h 1 v -2"
-         id="path127279"
-         sodipodi:nodetypes="cccc" />
-      <path
-         style="fill:#5dd1d8;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 69,50 v -7 h -1 v 7 m 5,0 v -7 h -1 v 7"
-         id="path131064"
-         sodipodi:nodetypes="cccccccc" />
-      <path
-         style="display:inline;fill:#b4fbff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 68,42 h 1 v -1 h 3 v 1 h 1 v -1 h -1 v -1 h -3 v 1 h -1"
-         id="path133182"
-         sodipodi:nodetypes="cccccccccccc" />
+       style="display:none"
+       inkscape:groupmode="layer">
+      <g
+         id="g75529"
+         inkscape:label="pop">
+        <animateTransform
+           attributeType="xml"
+           attributeName="transform"
+           type="rotate"
+           values="0, 71, 54; 0, 71, 54; -6, 71, 54;7, 71, 54; -6, 71, 54; 0, 71, 54"
+           keyTimes="0; 0.9; 0.925; 0.95; 0.975; 1"
+           dur="7s"
+           additive="sum"
+           repeatCount="indefinite" />
+        <path
+           style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 69,54 h 3 v -2 h 2 v -1 h 1 v -9 h -1 v -1 h -1 v -1 h -1 v -1 h -3 v 1 h -1 v 1 h -1 v 1 h -1 v 8 1 h 1 v 1 h 2"
+           id="path122969"
+           sodipodi:nodetypes="ccccccccccccccccccccccccc"
+           inkscape:label="pop_shadow" />
+        <path
+           style="fill:#f2c8a2;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 70,51 v 3 h 1 v -3"
+           id="path127279"
+           sodipodi:nodetypes="cccc"
+           inkscape:label="pop_stick" />
+        <path
+           style="fill:#79e8f3;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 72,40 h -3 v 1 h -1 v 1 h -1 v 8 1 h 2 v 1 h 3 v -1 h 2 v -9 h -1 v -1 h -1"
+           id="path126170"
+           sodipodi:nodetypes="ccccccccccccccccc"
+           inkscape:label="pop_color" />
+        <path
+           style="fill:#5dd1d8;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 69,50 v -7 h -1 v 7 m 5,0 v -7 h -1 v 7"
+           id="path131064"
+           sodipodi:nodetypes="cccccccc"
+           inkscape:label="pop_shadow" />
+        <path
+           style="display:inline;fill:#b4fbff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 68,42 h 1 v -1 h 3 v 1 h 1 v -1 h -1 v -1 h -3 v 1 h -1"
+           id="path133182"
+           sodipodi:nodetypes="cccccccccccc"
+           inkscape:label="pop_highlight" />
+        <path
+           style="fill:#79e8f3;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 67,49 v 2 h 1 v -2"
+           id="path74673"
+           sodipodi:nodetypes="cccc"
+           inkscape:label="pop_drip_left">
+          <animateTransform
+             id="pdl"
+             attributeName="transform"
+             attributeType="xml"
+             begin="7;pdl.end+6"
+             dur="1"
+             repeatCount="1"
+             type="translate"
+             additive="replace"
+             values="0,0; 0,45;" />
+        </path>
+        <path
+           style="fill:#79e8f3;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 74,49 v 2 h -1 v -2"
+           id="path69732"
+           sodipodi:nodetypes="cccc"
+           inkscape:label="pop_drip_right">
+          <animateTransform
+             id="pdr"
+             attributeName="transform"
+             attributeType="xml"
+             begin="8;pdr.end+6"
+             dur="1"
+             repeatCount="1"
+             type="translate"
+             additive="replace"
+             values="0,0; 0,45;" />
+        </path>
+      </g>
     </g>
     <g
        id="g361027"
@@ -2562,7 +2685,8 @@
     <g
        id="g213157"
        inkscape:label="bird"
-       style="display:none">
+       style="display:none"
+       inkscape:groupmode="layer">
       <g
          id="g1180"
          inkscape:label="head"
@@ -2605,8 +2729,9 @@
         <path
            id="path1178"
            style="display:inline;fill:#ffffff;fill-opacity:0.15;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 7,59 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 1,1 v 1 h 2 v -1 z m 2,1 v 1 h 2 v -1 z m 2,1 v 1 h 2 v -1 z m 2,1 v 1 h 2 v -1 z m 2,1 v 1 h 4 v -1 z m 4,1 v 1 h 4 v -1 z m 4,1 v 1 h 4 v -1 z m 4,1 v 1 h 4 v -1 z m 4,1 v 1 h 2 V 71 Z M 85,59 v 1 h 1 v -1 z m 0,1 h -1 v 1 h 1 z m -1,1 h -1 v 1 h 1 z m -1,1 h -1 v 1 h 1 z m -1,1 h -2 v 1 h 2 z m -2,1 h -2 v 1 h 2 z m -2,1 h -2 v 1 h 2 z m -2,1 h -2 v 1 h 2 z m -2,1 h -4 v 1 h 4 z m -4,1 h -4 v 1 h 4 z m -4,1 h -4 v 1 h 4 z m -4,1 h -4 v 1 h 4 z m -4,1 h -2 v 1 h 2 z M 42,63 v 1 h 1 v -1 z m 1,1 v 2 h 1 v -2 z m -1,0 h -1 v 1 h 1 z m -1,1 h -1 v 1 h 1 z m -1,1 h -1 v 2 h 1 z m -1,2 h -1 v 1 h 1 z m 11,-5 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 1,1 v 2 h 1 v -2 z m 1,2 v 1 h 1 v -1 z m -4,-4 h -1 v 2 h 1 z m -5,5 v 1 h 3 v -1 z m 3,1 v 1 h 1 v -1 z m -3,0 h -1 v 1 h 1 z"
-           inkscape:label="highlights" />
+           d="m 42,63 v 1 h 1 v -1 z m 1,1 v 2 h 1 v -2 z m -1,0 h -1 v 1 h 1 z m -1,1 h -1 v 1 h 1 z m -1,1 h -1 v 2 h 1 z m -1,2 h -1 v 1 h 1 z m 11,-5 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 1,1 v 1 h 1 v -1 z m 1,1 v 2 h 1 v -2 z m 1,2 v 1 h 1 v -1 z m -4,-4 h -1 v 2 h 1 z m -5,5 v 1 h 3 v -1 z m 3,1 v 1 h 1 v -1 z m -3,0 h -1 v 1 h 1 z"
+           inkscape:label="highlights"
+           sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc" />
       </g>
       <g
          id="g211186"
