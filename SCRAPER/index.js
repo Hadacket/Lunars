@@ -81,22 +81,38 @@ function countNFTsByPolicyId(assets, policyID)
 	return count;
 }
 
-async function getIPFSPath(assets)
+class IPFS 
 {
-  var ipfs = [];
+  constructor(cid, name) 
+  {
+    this.cid = cid;
+    this.name = name;
+  }
+}
+
+async function getAssetsIPFS(assets)
+{
+  var result = [];
   console.log('getIPFSPath', 'startipds');
   var count=0;
   for (const a of assets)
   {
     var data = await API.assetsById(a.asset);
-    ipfs.push(data.onchain_metadata.image);
+    var name = data.onchain_metadata.name;
+    var image = data.onchain_metadata.image;
+    
+    let cid = image.substring(image.indexOf("ipfs://")+7);
+    
+    result.push(new IPFS(cid, name));
+    console.log('name', name);
+    console.log('image', cid);
     console.log('count', count);
     count++;
   }
   
   console.log('getIPFSPath', 'getIPFSPath');
   
-  return ipfs;
+  return result;
 }
 
 async function getNFTsByPolicyId(assets, policyID)
@@ -114,6 +130,45 @@ async function getNFTsByPolicyId(assets, policyID)
 	}
 	
 	return nfts;
+}
+
+async function pin(endpoint, accessToken, ipfs)
+{
+  
+  const response = await fetch(endpoint, { 
+        method: 'POST',
+        body: JSON.stringify(ipfs),
+        headers: new Headers({
+            "Authorization": "Bearer " + accessToken,
+            "Content-type": "application/json; charset=UTF-8"
+        })
+    });
+    
+    const responseJson = await response.json();
+    
+    console.log('pin status', responseJson.status);
+    
+    await new Promise(r => setTimeout(r, 15000));    
+}
+
+async function pinAllAssets(endpoint, accessToken, assets)
+{ 
+  var count=0;
+  for (const a of assets)
+  {
+    var data = await API.assetsById(a.asset);
+    var name = data.onchain_metadata.name;
+    var image = data.onchain_metadata.image;
+    
+    let cid = image.substring(image.indexOf("ipfs://")+7);
+    
+    let ipfs = new IPFS(cid, name);
+
+    await pin(endpoint, accessToken, ipfs);
+    
+    console.log('count', count);
+    count++;
+  }
 }
 
 app.get("/lunars", async (req, res) =>
@@ -176,6 +231,25 @@ app.get("/lunarsipfs", async (req, res) =>
 	
   res.json(data);
 });
+
+app.get("/pin/:policyID", async (req, res) =>
+{
+  const endpoint = "https://api.web3.storage/pins";
+  const accessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDEyNUZDZDlkZEUyZERhMURFOGI5YUVENkMyQjM4NzQxNzMwN2ZEQjUiLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2NzgyNDMxMDE1MzcsIm5hbWUiOiJ0ZXN0In0.3yM40pLELNOXAADjLeUDO_GDwuiKhiovdsg_f9EUlV4";
+  
+  const policyID = req.params.policyID;
+  console.log(policyID);
+  
+  
+  const assets = await assetByPolicy(policyID);
+  const data = await pinAllAssets(endpoint, accessToken, assets);
+	
+  res.json(data);
+});
+
+ const endpoint = "https://api.web3.storage/pins";
+  const accessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDEyNUZDZDlkZEUyZERhMURFOGI5YUVENkMyQjM4NzQxNzMwN2ZEQjUiLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2NzgyNDMxMDE1MzcsIm5hbWUiOiJ0ZXN0In0.3yM40pLELNOXAADjLeUDO_GDwuiKhiovdsg_f9EUlV4";
+
 
 app.listen(PORT, () => {
   console.log(`Server listening on ${PORT}`);
